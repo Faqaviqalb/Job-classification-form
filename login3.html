@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <title>login3</title>
+        <style>
+          @font-face {
+              font-family:shabnam-fd;
+              src: url(./shabnam-fd.ttf);
+          }
+          body {
+            margin: 0;
+            background-color: #000117;
+            font-family: shabnam-fd;
+            color: white;
+          }
+          .background {
+              width: 430px;
+              height: 520px;
+              position: absolute;
+              transform: translate(-50%,-50%);
+              left: 77%;
+              top: 50%;
+          }
+          .shape:first-child {
+              background: linear-gradient(
+                  #1845ad,
+                  #23a2f6
+              );
+              left: -80px;
+              top: -80px;
+          }
+          .shape:last-child {
+              background: linear-gradient(
+                  to right,
+                  #ff512f,
+                  #f09819
+              );
+              right: -30px;
+              bottom: -80px;
+          }
+          .background .shape {
+              height: 100px;
+              width: 100px;
+              position: absolute;
+              border-radius: 50%;
+          }
+          .form{
+          background-color: rgba(255,255,255,0.13);
+          position: absolute;
+          transform: translate(-50%,-50%);
+          top: 50%;
+          left: 50%;
+          border-radius: 10px;
+          border: 2px solid rgba(255,255,255,0.1);
+          box-shadow: 0 0 40px rgb(8 7 16 / 60%);
+          padding: 50px 35px;
+          }
+          .title{
+              text-align: center;
+              color: white;
+              background: #585858c9;
+              padding: 20px;
+              border-radius: 5px;
+          }
+          .form-check .form-check-input{
+              float: right;
+          }
+          .form-check-input[type=radio] {
+              margin-left: 13px;
+          }
+          .form-check {
+              padding-right: 1em;
+              padding-left: 0;
+              display: inline-table;
+              width: 49%;
+          }
+
+          .circles{
+              position: absolute;
+              bottom: 1rem;
+              margin-right: 45%;
+          }
+          .circle{
+              border-color: #0d6efd;
+              border: 1px solid #0d6efd;
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              padding: 0 0px;
+          }
+          @media(max-width: 768px){
+              .form-control{
+                  padding-right: 0;
+              }
+              .form-check-input[type=radio] {
+                  margin-left: 5px;
+              }
+              .form{
+                  padding: 50px 0px;
+              }
+              .title{
+                  padding: 20px 5px;
+              }
+          }
+          .radios{
+              font-size: 83%;
+          }
+          i{
+              display: block;
+              font-size: 4rem;
+          }
+          .title{
+              font-size: 1rem;
+          }
+          @media (max-width: 768px){
+              .title{
+                  font-size: 1rem;
+              } 
+          }
+
+          .display-none{
+              display: none;
+          }
+
+          .radios{
+              height: 0;
+              overflow: hidden;
+              transition: height 0.5s;
+          }
+          .back{
+              background-color: green;
+          }
+          .categories{
+              position: relative;
+          }
+          .high{
+              height: 200px;
+              transition: height 0.5s;
+          }
+          .show{
+              height: 350px;
+          }
+          .disable{
+              position: absolute;
+              top:0;
+              left:0;
+              right:0;
+              bottom:0;
+          }
+
+        </style>
+</head>
+<body>
+    <div class="col-11 form">
+        <div class="row">
+            <div class="col-md-4 col-12 category">
+                <div class="categories">
+                    <h4 class="title mx-2"><i class="mdi mdi-cart-outline"></i>فروشگاهی</h4>
+                    <div class="disabled"></div>
+                    <div class="radios">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked> نقاشی و طراحی
+                          </div>
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">لوازم خانگی
+                          </div>
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3">آرایشی و بهداشتی
+                          </div>
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio4" name="optradio" value="option4">بازی
+                          </div>
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio5" name="optradio" value="option5">برند سازی شخصی
+                          </div>
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio6" name="optradio" value="option6">وکیل
+                          </div>
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio7" name="optradio" value="option7">روانشناس
+                          </div>
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio8" name="optradio" value="option8">اینفلوءنسر
+                          </div>
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio9" name="optradio" value="option9">بیمه
+                          </div>
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio10" name="optradio" value="option10">گل و گیاه
+                          </div>
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio11" name="optradio" value="option11">موادغذایی
+                          </div>
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio12" name="optradio" value="option12">رستوران / کافی شاپ
+                          </div>
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio13" name="optradio" value="option13">مبل و دکور
+                          </div>
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio14" name="optradio" value="option14">برق و الکترونیک
+                          </div>
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio15" name="optradio" value="option15">جواهرات و بدلیجات 
+                          </div>
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio16" name="optradio" value="option16">صنایع دستی
+                          </div>
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio17" name="optradio" value="option17">پوشاک 
+                          </div>
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio18" name="optradio" value="option18">نرم افزاری یا فایل آموزشی
+                          </div>
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio19" name="optradio" value="option19">سایر
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12 category">
+                <div class="categories">
+                    <h4 class="title mx-2"><i class="mdi mdi-doctor"></i>معرفی/شرکتی/شخصی/پزشکی</h4>
+                    <div class="disabled"></div>
+                    <div class="radios">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio20" name="optradio" value="option20">چاپ و تبلیغات
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio21" name="optradio" value="option21">طراحی دکوراسیون
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio22" name="optradio" value="option22">سفر و گردشگری 
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio23" name="optradio" value="option23">آتلیه و هنری 
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio24" name="optradio" value="option24">املاک 
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio25" name="optradio" value="option25">اتو گالری 
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio26" name="optradio" value="option26">سایر 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12 category">
+                <div class="categories">
+                    <h4 class="title mx-2"><i class="mdi mdi-email-newsletter"></i>خبری</h4>
+                    <div class="disabled"></div>
+                    <div class="radios">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio27" name="optradio" value="option27">ورزشی
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio28" name="optradio" value="option28">اخبار روز
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio29" name="optradio" value="option29">سرگرمی
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio30" name="optradio" value="option30">انرژی مثبت
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio31" name="optradio" value="option31">سایر
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="circles row">
+            <div class="circle mx-1"></div>
+            <div class="circle mx-1"></div>
+            <div class="circle mx-1"></div>
+            <div class="circle mx-1"></div>
+            <div class="circle mx-1"></div>
+            <div class="circle mx-1"></div>
+        </div>
+    </div>
+    <script>
+      $(document).ready(function(){
+        $('.title').on('click' , function(){
+            $('.categories').css('opacity','0.6');
+            $(this).parent().css('opacity','1');
+            $('.disabled').toggleClass('disable');
+            $(this).next('.disabled').removeClass('disable');
+            $('.title').removeClass('back');
+                $('.radios').toggleClass('high');
+                if($(".radios").hasClass('high')){
+                $(this).toggleClass('back');
+                }
+        })
+    })
+    </script>
+</body>
+</html>
