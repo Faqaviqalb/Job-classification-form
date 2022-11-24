@@ -1,1 +1,3 @@
 # Job-classification-form
+A fully-responsive classification where you can just choose from the title that you select...
+Css and Jquery is included inside the HTML file.
